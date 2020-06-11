@@ -1,0 +1,40 @@
+{
+  "name": "@ekidpro/bridge",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ekidpro-vn/bridge",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "author": {
+    "name": "Luong Van Lam - lamlv",
+    "email": "lamlv@egroup.vn"
+  },
+  "bugs": {
+    "url": "https://github.com/ekidpro-vn/bridge/issues",
+    "email": "lamlv@egroup.vn"
+  },
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run check"
+  },
+  "devDependencies": {
+    "@types/node": "^13.11.1",
+    "@types/uuid": "^8.0.0",
+    "gts": "^2.0.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "uuid": "^8.1.0"
+  }
+}
