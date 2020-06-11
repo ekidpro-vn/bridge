@@ -1,2 +1,4 @@
 export * from './web';
-export * as DataTypes from './types';
+
+export {Request, Response, RequestType, ResponseType} from './types';
+export * from './types';
