@@ -8,9 +8,13 @@ declare global {
     ekp: {
       listener?: Listener;
     };
+    webkitRTCPeerConnection: any;
+    mozRTCPeerConnection: any;
   }
 }
 
 export {Listener, NetworkChange} from './listener';
 export {controller} from './controller';
 export {default as command} from './command';
+export {QrGenerator} from './qrcode';
+export {Link} from './link';
