@@ -3,7 +3,10 @@
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "build",
-    "lib": ["es5", "es6", "dom"]
+    "lib": ["es5", "es6", "dom", "dom.iterable", "esnext"],
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowJs": true
   },
-  "include": ["src/**/*.ts", "test/**/*.ts"]
+  "include": ["src/**/*.ts", "test/**/*.ts", "src/web/qrcode/qrcode.tsx"]
 }
