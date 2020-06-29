@@ -46,6 +46,7 @@ class Controller {
   }
 
   private obseve = (input: Event) => {
+    console.log(49, input);
     const tmp = input as CustomEvent;
     const {detail} = tmp;
 
