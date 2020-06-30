@@ -146,6 +146,10 @@ Example:
 import {command} from '@ekidpro/web';
 ```
 
-- getDeviceInfo() => Promise<DeviceInfo>
+- command.device.getDeviceInfo() => Promise<DeviceInfo>
+
+- command.user.getUserInfo() => Promise<UserInfo>
+
+- command.user.scanQr() => Promise<string>
 
 - // TODO: getUserInfo()
