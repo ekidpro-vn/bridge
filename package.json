@@ -1,6 +1,6 @@
 {
   "name": "@ekidpro/bridge",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Bridge between ekidpro app with website",
   "homepage": "https://github.com/ekidpro-vn/bridge",
   "main": "build/src/index.js",
@@ -34,7 +34,6 @@
     "@types/node": "^13.11.1",
     "@types/qrcode.react": "^1.0.1",
     "@types/react": "^16.9.36",
-    "@types/react-router": "^5.1.7",
     "@types/react-router-dom": "^5.1.5",
     "@types/uuid": "^8.0.0",
     "gts": "^2.0.2",

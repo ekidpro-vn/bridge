@@ -7,6 +7,12 @@ declare global {
     };
     ekp: {
       listener?: Listener;
+      inset?: {
+        top: number;
+        left: number;
+        bottom: number;
+        right: number;
+      };
     };
     webkitRTCPeerConnection: any;
     mozRTCPeerConnection: any;
