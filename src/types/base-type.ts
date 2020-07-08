@@ -4,7 +4,8 @@ export interface ResponseType<Channel, DataType> {
   data: DataType;
 }
 
-export interface RequestType<Channel> {
+export interface RequestType<Channel, Extra = void> {
   id: string;
   channel: Channel;
+  data?: Extra;
 }

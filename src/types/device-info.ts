@@ -32,3 +32,32 @@ export type GetDeviceInfoResponse = ResponseType<
   typeof GetDeviceInfoChannel,
   DeviceInfo
 >;
+
+export const SetStatusBarChannel = 'CHANNEL_SET_STATUS_BAR';
+export type StatusBarType = 'default' | 'light-content' | 'dark-content';
+export type SetStatusBarRequest = RequestType<
+  typeof SetStatusBarChannel,
+  StatusBarType
+>;
+export type SetStatusBarResponse = ResponseType<
+  typeof SetStatusBarChannel,
+  StatusBarType
+>;
+
+export const SetBackButtonStatusChannel = 'CHANNEL_SET_BACK_BUTTON_STATUS';
+export type BackButtonStatus = 'show' | 'hidden';
+export type SetBackButtonStatusRequest = RequestType<
+  typeof SetBackButtonStatusChannel,
+  BackButtonStatus
+>;
+export type SetBackButtonStatusResponse = ResponseType<
+  typeof SetBackButtonStatusChannel,
+  BackButtonStatus
+>;
+
+export const GoBackChannel = 'CHANNEL_NAVIGATION_GO_BACK';
+export type SetNavigationGoBackRequest = RequestType<typeof GoBackChannel>;
+export type SetNavigationGoBackResponse = ResponseType<
+  typeof GoBackChannel,
+  boolean
+>;

@@ -24,9 +24,6 @@
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
-    "prepare": "npm run compile",
-    "pretest": "npm run compile",
-    "posttest": "npm run check",
     "watch": "tsc -w"
   },
   "devDependencies": {
@@ -45,8 +42,6 @@
   },
   "dependencies": {
     "qrcode.react": "^1.0.0",
-    "react": "^16.11.0",
-    "react-router-dom": "^5.2.0",
     "uuid": "^8.1.0"
   }
 }

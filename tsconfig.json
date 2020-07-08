@@ -8,5 +8,6 @@
     "esModuleInterop": true,
     "allowJs": true
   },
-  "include": ["src/**/*.ts", "test/**/*.ts", "src/web/qrcode/qrcode.tsx"]
+  "include": ["src/**/*.ts", "test/**/*.ts", "src/web/qrcode/qrcode.tsx"],
+  "exclude": ["node_modules", "**/__tests__/*"]
 }
