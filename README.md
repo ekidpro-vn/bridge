@@ -46,17 +46,17 @@ $ import { HashRouter } from "react-router-dom";
 
 - Xuất project để upload lên cms:
 
-  ```
-  $ npm run build
+```
+$ npm run build
 
-  OR
+OR
 
-  $ yarn build
-  ```
+$ yarn build
+```
 
-  Sau đó zip folder build rồi up lên CMS
+Sau đó zip folder build rồi up lên CMS
 
-  // TODO: Hướng dẫn up build lên cms
+// TODO: Hướng dẫn up build lên cms
 
 ## Cài đặt SDK
 
@@ -82,26 +82,26 @@ $ yarn add @ekidpro/web
 1. Lắng nghe sự kiện từ app truyền vào
 
 ```js
-    import { controller } from '@ekidpro/web'
-    ...
-    controller.start()
+import { controller } from '@ekidpro/web'
+...
+controller.start()
 
-    ...
-    controller.stop()
+...
+controller.stop()
 
-    ...
+...
 ```
 
 Example:
 
 ```
-    useEffect(() => {
-      controller.start();
+useEffect(() => {
+  controller.start();
 
-      return () => {
-        controller.stop();
-      };
-    }, []);
+  return () => {
+    controller.stop();
+  };
+}, []);
 ```
 
 2. Lắng nghe event
@@ -125,19 +125,19 @@ listener.onOrientationChange = e => {
 Example:
 
 ```
-    useEffect(() => {
-      const listener = Listener.start();
+useEffect(() => {
+  const listener = Listener.start();
 
-      listener.onNetworkChange = (e) => {
-        console.log(e);
-      };
+  listener.onNetworkChange = (e) => {
+    console.log(e);
+  };
 
-      listener.onOrientationChange = (e) => {
-        console.log(e);
-      };
+  listener.onOrientationChange = (e) => {
+    console.log(e);
+  };
 
-      return () => listener.stop();
-    }, []);
+  return () => listener.stop();
+}, []);
 ```
 
 3. Gửi yêu cầu lấy dữ liệu
@@ -148,8 +148,14 @@ import {command} from '@ekidpro/web';
 
 - command.device.getDeviceInfo() => Promise<DeviceInfo>
 
-- command.user.getUserInfo() => Promise<UserInfo>
+- command.userinfo.getUserInfo() => Promise<UserInfo>
 
-- command.user.scanQr() => Promise<string>
+- command.userinfo.scanQr() => Promise<string>
 
-- // TODO: getUserInfo()
+- command.device.setButtonStatus() => Promise<'show' | 'hidden'>
+
+- command.device.setStatusBarStyle() => Promise<'default' | 'light-content' | 'dark-content'>
+
+- command.device.goBack() => Promise<boolean>
+
+* // TODO: getUserInfo()
