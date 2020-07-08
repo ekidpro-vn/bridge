@@ -13,6 +13,7 @@ declare global {
         bottom: number;
         right: number;
       };
+      deeplink?: string;
     };
     webkitRTCPeerConnection: any;
     mozRTCPeerConnection: any;
