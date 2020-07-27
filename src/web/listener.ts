@@ -1,3 +1,5 @@
+import {Emitter} from './emitter/emitter';
+
 declare let window: Window;
 
 export class Listener {
@@ -15,11 +17,15 @@ export class Listener {
     }
 
     window.ekp.listener = new Listener();
+    window.ekp.emitter = new Emitter();
     return window.ekp.listener;
   };
 
   public stop = () => {
     window.ekp.listener = undefined;
+    if (window.ekp.emitter) {
+      window.ekp.emitter.destroy();
+    }
   };
 }
 
