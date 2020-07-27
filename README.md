@@ -159,3 +159,23 @@ import {command} from '@ekidpro/web';
 - command.device.goBack() => Promise<boolean>
 
 * // TODO: getUserInfo()
+
+4. Lắng nghe thay đổi từ trong app
+
+```js
+window.ekp.emitter;
+```
+
+Đây là object Emitter dành cho việc giao tiếp. Nếu như khó trong việc quản lý state, việc thay đổi emitter thành object|events khác hoàn toàn khả thi.
+
+First example:
+
+```js
+const handler = data => console.log(data);
+
+window.ekp.emitter.add('INSETS_CHANGE', handler);
+
+// Later
+// IMPORTANT: do not forget to remove handler
+window.ekp.emitter.remove('INSETS_CHANGE', handler);
+```

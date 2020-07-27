@@ -1,4 +1,5 @@
 import {Listener} from './listener';
+import {Emitter} from './emitter/emitter';
 
 declare global {
   interface Window {
@@ -13,6 +14,7 @@ declare global {
         bottom: number;
         right: number;
       };
+      emitter?: Emitter;
       deeplink?: string;
     };
     webkitRTCPeerConnection: any;
@@ -20,6 +22,7 @@ declare global {
   }
 }
 
+export {EmitterEvents} from './emitter/emitter-events';
 export {Listener, NetworkChange} from './listener';
 export {controller} from './controller';
 export {default as command} from './command';
