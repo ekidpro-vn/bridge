@@ -23,6 +23,7 @@ declare global {
   }
 }
 
+export * from './qrcode/debugger';
 export {EmitterEvents} from './emitter/emitter-events';
 export {Listener, NetworkChange} from './listener';
 export {controller} from './controller';
