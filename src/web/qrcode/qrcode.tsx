@@ -24,6 +24,7 @@ export const QrGenerator: React.FC = () => {
   useEffect(() => {
     if (
       localIp === '' ||
+      typeof window.ekp === 'undefined' ||
       typeof window.ekp.isMobile === 'undefined' ||
       !window.ekp.isMobile
     ) {
