@@ -22,7 +22,11 @@ export const QrGenerator: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (localIp === '') {
+    if (
+      localIp === '' ||
+      typeof window.ekp.isMobile === 'undefined' ||
+      !window.ekp.isMobile
+    ) {
       return () => {};
     }
 

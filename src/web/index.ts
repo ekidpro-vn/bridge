@@ -16,6 +16,7 @@ declare global {
       };
       emitter?: Emitter;
       deeplink?: string;
+      isMobile?: boolean;
     };
     webkitRTCPeerConnection: any;
     mozRTCPeerConnection: any;
