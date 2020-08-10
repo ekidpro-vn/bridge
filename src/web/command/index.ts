@@ -6,6 +6,7 @@ import {
 } from './device-info';
 import {getUserInfo} from './user-info';
 import {scanQr} from './scan-qr';
+import {login, getUserInfo as fetchUserInfo, reset} from './remote';
 
 export default {
   device: {
@@ -17,5 +18,10 @@ export default {
   },
   userinfo: {
     getUserInfo,
+  },
+  remote: {
+    login,
+    fetchUserInfo,
+    reset,
   },
 };

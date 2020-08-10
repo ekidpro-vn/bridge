@@ -152,13 +152,28 @@ import {command} from '@ekidpro/web';
 
 - command.userinfo.scanQr() => Promise<string>
 
-- command.device.setButtonStatus() => Promise<'show' | 'hidden'>
+- command.device.setButtonStatus(type: 'show' | 'hidden') => Promise<'show' | 'hidden'>
 
-- command.device.setStatusBarStyle() => Promise<'default' | 'light-content' | 'dark-content'>
+- command.device.setStatusBarStyle(type: 'default' | 'light-content' | 'dark-content') => Promise<'default' | 'light-content' | 'dark-content'>
 
 - command.device.goBack() => Promise<boolean>
 
-* // TODO: getUserInfo()
+- Mini web function
+
+```js
+
+- Đăng nhập, lấy token và thông tin user
+command.remote.login(username: string, password: string) => Promise<UserInfo>
+
+- Lấy thông tin mới nhất của user. Nếu forceNew thì sẽ gọi từ api, còn ko lấy dữ liệu từ localStorage
+command.remote.fetchUserInfo(forceNew : boolean) => Promise<UserInfo>
+
+- Xoá dữ liệu đã lưu tại localStorage. Clear cache
+command.remote.reset()
+
+```
+
+- // TODO: getUserInfo()
 
 4. Lắng nghe thay đổi từ trong app
 
