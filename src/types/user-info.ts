@@ -18,6 +18,7 @@ export interface Workspace {
 export type UserInfo = {
   token: string;
   fullName?: string;
+  username?: string;
   email?: string;
   avatar?: string;
   workspace?: Workspace;
