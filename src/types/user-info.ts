@@ -21,6 +21,7 @@ export type UserInfo = {
   username?: string;
   email?: string;
   avatar?: string;
+  metadata?: string;
   workspace?: Workspace;
 };
 
