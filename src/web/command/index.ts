@@ -4,6 +4,7 @@ import {
   setStatusBarStyle,
   goBack,
 } from './device-info';
+import {setMiniAppInfo} from './mini-app-info';
 import {getUserInfo} from './user-info';
 import {scanQr} from './scan-qr';
 import {login, getUserInfo as fetchUserInfo, reset} from './remote';
@@ -23,5 +24,8 @@ export default {
     login,
     fetchUserInfo,
     reset,
+  },
+  miniappinfo: {
+    setMiniAppInfo,
   },
 };

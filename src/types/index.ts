@@ -9,6 +9,7 @@ import {
   SetNavigationGoBackResponse,
 } from './device-info';
 import {GetUserInfoRequest, GetUserInfoResponse} from './user-info';
+import {SetMiniAppInfoRequest, SetMiniAppInfoResponse} from './mini-app-info';
 import {ScanQRRequest, ScanQRResponse} from './scan-qr';
 
 export type Request =
@@ -17,7 +18,8 @@ export type Request =
   | ScanQRRequest
   | SetBackButtonStatusRequest
   | SetStatusBarRequest
-  | SetNavigationGoBackRequest;
+  | SetNavigationGoBackRequest
+  | SetMiniAppInfoRequest;
 
 export type Response =
   | GetDeviceInfoResponse
@@ -25,9 +27,11 @@ export type Response =
   | ScanQRResponse
   | SetBackButtonStatusResponse
   | SetStatusBarResponse
-  | SetNavigationGoBackResponse;
+  | SetNavigationGoBackResponse
+  | SetMiniAppInfoResponse;
 
 export {RequestType, ResponseType} from './base-type';
 export * from './device-info';
 export * from './user-info';
 export * from './scan-qr';
+export * from './mini-app-info';
