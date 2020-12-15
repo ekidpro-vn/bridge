@@ -1,0 +1,26 @@
+import {ResponseType, RequestType} from './base-type';
+
+export type MiniAppInfo = {
+  id: number;
+  name: string | undefined;
+  icon: string | undefined;
+  icon_featured: string | undefined;
+  bundle_id: string;
+  version: string;
+  url: string;
+  status: 'ACTIVE' | 'INACTIVE';
+  category: string;
+  is_featured: number;
+  order: number | undefined | null;
+};
+
+export const SetMiniAppInfoChannel = 'CHANNEL_SET_MINI_APP_INFO';
+
+export type SetMiniAppInfoRequest = RequestType<
+  typeof SetMiniAppInfoChannel,
+  MiniAppInfo
+>;
+export type SetMiniAppInfoResponse = ResponseType<
+  typeof SetMiniAppInfoChannel,
+  MiniAppInfo
+>;
