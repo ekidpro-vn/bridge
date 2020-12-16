@@ -9,7 +9,12 @@ import {
   SetNavigationGoBackResponse,
 } from './device-info';
 import {GetUserInfoRequest, GetUserInfoResponse} from './user-info';
-import {SetMiniAppInfoRequest, SetMiniAppInfoResponse} from './mini-app-info';
+import {
+  SetMiniAppInfoRequest,
+  SetMiniAppInfoResponse,
+  SetListWorkspaceStatusRequest,
+  SetListWorkspaceStatusResponse,
+} from './mini-app-info';
 import {ScanQRRequest, ScanQRResponse} from './scan-qr';
 
 export type Request =
@@ -19,7 +24,8 @@ export type Request =
   | SetBackButtonStatusRequest
   | SetStatusBarRequest
   | SetNavigationGoBackRequest
-  | SetMiniAppInfoRequest;
+  | SetMiniAppInfoRequest
+  | SetListWorkspaceStatusRequest;
 
 export type Response =
   | GetDeviceInfoResponse
@@ -28,7 +34,8 @@ export type Response =
   | SetBackButtonStatusResponse
   | SetStatusBarResponse
   | SetNavigationGoBackResponse
-  | SetMiniAppInfoResponse;
+  | SetMiniAppInfoResponse
+  | SetListWorkspaceStatusResponse;
 
 export {RequestType, ResponseType} from './base-type';
 export * from './device-info';

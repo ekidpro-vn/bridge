@@ -12,6 +12,6 @@ export const getUserInfo = async (): Promise<UserInfo> => {
   if (tmp) {
     return tmp;
   } else {
-    throw new Error("Can't get device info");
+    throw new Error("Can't get user info");
   }
 };
