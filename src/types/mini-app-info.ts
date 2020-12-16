@@ -24,3 +24,15 @@ export type SetMiniAppInfoResponse = ResponseType<
   typeof SetMiniAppInfoChannel,
   MiniAppInfo
 >;
+
+export const SetListWorkspaceStatusChannel =
+  'CHANNEL_SET_LIST_WORKSPACE_STATUS';
+export type ListWorkspaceStatus = 'show' | 'hidden';
+export type SetListWorkspaceStatusRequest = RequestType<
+  typeof SetListWorkspaceStatusChannel,
+  ListWorkspaceStatus
+>;
+export type SetListWorkspaceStatusResponse = ResponseType<
+  typeof SetListWorkspaceStatusChannel,
+  ListWorkspaceStatus
+>;
