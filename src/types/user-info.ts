@@ -21,7 +21,11 @@ export type UserInfo = {
   username?: string;
   email?: string;
   avatar?: string;
-  metadata?: string;
+  mobile?: string | undefined;
+  birthday?: string | undefined;
+  uid?: number | undefined;
+  type?: string | undefined;
+  metadata?: string | undefined;
   workspace?: Workspace;
 };
 

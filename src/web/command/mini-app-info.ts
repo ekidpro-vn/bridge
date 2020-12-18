@@ -33,6 +33,10 @@ export const setListWorkspaceStatus = async (
     data: input,
   });
 
-  const tmp = data.data as ListWorkspaceStatus;
-  return tmp;
+  const tmp = data?.data as ListWorkspaceStatus;
+  if (tmp) {
+    return tmp;
+  } else {
+    throw new Error("Can't get data");
+  }
 };
