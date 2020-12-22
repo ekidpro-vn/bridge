@@ -27,7 +27,7 @@ export type SetMiniAppInfoResponse = ResponseType<
 
 export const SetListWorkspaceStatusChannel =
   'CHANNEL_SET_LIST_WORKSPACE_STATUS';
-export type ListWorkspaceStatus = 'show' | 'hidden';
+export type ListWorkspaceStatus = true | false;
 export type SetListWorkspaceStatusRequest = RequestType<
   typeof SetListWorkspaceStatusChannel,
   ListWorkspaceStatus

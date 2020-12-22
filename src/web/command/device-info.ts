@@ -46,8 +46,12 @@ export const setButtonStatus = async (
     data: input,
   });
 
-  const tmp = data.data as BackButtonStatus;
-  return tmp;
+  const tmp = data?.data as BackButtonStatus;
+  if (tmp) {
+    return tmp;
+  } else {
+    throw new Error("Can't get data");
+  }
 };
 
 export const goBack = async (): Promise<boolean> => {
