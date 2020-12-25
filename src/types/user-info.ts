@@ -13,6 +13,7 @@ export interface Workspace {
   status: 'ACTIVE' | 'INACTIVE';
   group_name: string | undefined;
   w_role?: string;
+  setting?: string | undefined;
 }
 
 export type UserInfo = {
@@ -37,3 +38,7 @@ export type GetUserInfoResponse = ResponseType<
   typeof GetUserInfoChannel,
   UserInfo | undefined
 >;
+
+export const SetSettingChannel = 'CHANNEL_SET_SETTING';
+export type SetSettingRequest = RequestType<typeof SetSettingChannel, string>;
+export type SetSettingResponse = ResponseType<typeof SetSettingChannel, string>;
