@@ -28,6 +28,7 @@ export type UserInfo = {
   type?: string | undefined;
   metadata?: string | undefined;
   workspace?: Workspace;
+  language?: string | 'vi';
 };
 
 export const GetUserInfoChannel = 'CHANNEL_GET_USER_INFO';
