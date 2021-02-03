@@ -8,6 +8,7 @@ import {setMiniAppInfo, setListWorkspaceStatus} from './mini-app-info';
 import {getUserInfo, setSetting} from './user-info';
 import {scanQr} from './scan-qr';
 import {login, getUserInfo as fetchUserInfo, reset} from './remote';
+import {selectImageVideo, recordVideo} from './select-image-video';
 
 export default {
   device: {
@@ -29,5 +30,9 @@ export default {
   miniappinfo: {
     setMiniAppInfo,
     setListWorkspaceStatus,
+  },
+  imagevideo: {
+    selectImageVideo,
+    recordVideo,
   },
 };
