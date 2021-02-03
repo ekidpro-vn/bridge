@@ -21,6 +21,12 @@ import {
   SetListWorkspaceStatusResponse,
 } from './mini-app-info';
 import {ScanQRRequest, ScanQRResponse} from './scan-qr';
+import {
+  SelectImageVideoRequest,
+  SelectImageVideoResponse,
+  RecordVideoRequest,
+  RecordVideoResponse,
+} from './select-image-video';
 
 export type Request =
   | GetDeviceInfoRequest
@@ -31,7 +37,9 @@ export type Request =
   | SetNavigationGoBackRequest
   | SetMiniAppInfoRequest
   | SetListWorkspaceStatusRequest
-  | SetSettingRequest;
+  | SetSettingRequest
+  | SelectImageVideoRequest
+  | RecordVideoRequest;
 
 export type Response =
   | GetDeviceInfoResponse
@@ -42,10 +50,13 @@ export type Response =
   | SetNavigationGoBackResponse
   | SetMiniAppInfoResponse
   | SetListWorkspaceStatusResponse
-  | SetSettingResponse;
+  | SetSettingResponse
+  | SelectImageVideoResponse
+  | RecordVideoResponse;
 
 export {RequestType, ResponseType} from './base-type';
 export * from './device-info';
 export * from './user-info';
 export * from './scan-qr';
 export * from './mini-app-info';
+export * from './select-image-video';
