@@ -5,6 +5,7 @@ import {
   MiniAppInfo,
   ListWorkspaceStatus,
   SetListWorkspaceStatusChannel,
+  SetScreenNavigateChannel,
 } from '../../types';
 
 export const setMiniAppInfo = async (
@@ -39,4 +40,15 @@ export const setListWorkspaceStatus = async (
   } else {
     throw new Error("Can't get data");
   }
+};
+
+export const setSreenNavigate = async (input: string): Promise<string> => {
+  const data = await controller.request({
+    id: uuid(),
+    channel: SetScreenNavigateChannel,
+    data: input,
+  });
+
+  const tmp = data?.data as string;
+  return tmp;
 };

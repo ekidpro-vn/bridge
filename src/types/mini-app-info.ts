@@ -36,3 +36,13 @@ export type SetListWorkspaceStatusResponse = ResponseType<
   typeof SetListWorkspaceStatusChannel,
   ListWorkspaceStatus
 >;
+
+export const SetScreenNavigateChannel = 'CHANNEL_SET_SCREEN_NAVIGATE';
+export type SetScreenNavigateRequest = RequestType<
+  typeof SetScreenNavigateChannel,
+  string
+>;
+export type SetScreenNavigateResponse = ResponseType<
+  typeof SetScreenNavigateChannel,
+  string
+>;
