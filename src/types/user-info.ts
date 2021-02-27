@@ -14,6 +14,7 @@ export interface Workspace {
   group_name: string | undefined;
   w_role?: string;
   setting?: string | undefined;
+  socola_token?: string;
 }
 
 export type UserInfo = {
