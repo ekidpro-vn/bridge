@@ -22,7 +22,14 @@ import {
   SetScreenNavigateRequest,
   SetScreenNavigateResponse,
 } from './mini-app-info';
-import {ScanQRRequest, ScanQRResponse} from './scan-qr';
+import {
+  ScanQRRequest,
+  ScanQRResponse,
+  CheckinSelfiRequest,
+  CheckinSelfiResponse,
+  CameraTypeRequest,
+  CameraTypeResponse,
+} from './scan-qr';
 import {
   SelectImageVideoRequest,
   SelectImageVideoResponse,
@@ -42,7 +49,9 @@ export type Request =
   | SetSettingRequest
   | SelectImageVideoRequest
   | RecordVideoRequest
-  | SetScreenNavigateRequest;
+  | SetScreenNavigateRequest
+  | CheckinSelfiRequest
+  | CameraTypeRequest;
 
 export type Response =
   | GetDeviceInfoResponse
@@ -56,7 +65,9 @@ export type Response =
   | SetSettingResponse
   | SelectImageVideoResponse
   | RecordVideoResponse
-  | SetScreenNavigateResponse;
+  | SetScreenNavigateResponse
+  | CheckinSelfiResponse
+  | CameraTypeResponse;
 
 export {RequestType, ResponseType} from './base-type';
 export * from './device-info';
