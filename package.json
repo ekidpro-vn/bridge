@@ -1,6 +1,6 @@
 {
   "name": "@ekidpro/bridge",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "description": "Bridge between ekidpro app with website",
   "homepage": "https://github.com/ekidpro-vn/bridge",
   "main": "build/src/index.js",

@@ -10,7 +10,7 @@ import {
   setSreenNavigate,
 } from './mini-app-info';
 import {getUserInfo, setSetting} from './user-info';
-import {scanQr} from './scan-qr';
+import {scanQr, checkinSelfi, getCameraType} from './scan-qr';
 import {login, getUserInfo as fetchUserInfo, reset} from './remote';
 import {selectImageVideo, recordVideo} from './select-image-video';
 
@@ -21,6 +21,8 @@ export default {
     setButtonStatus,
     setStatusBarStyle,
     goBack,
+    checkinSelfi,
+    getCameraType,
   },
   userinfo: {
     getUserInfo,
