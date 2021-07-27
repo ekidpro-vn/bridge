@@ -30,7 +30,7 @@ export const QrGenerator: React.FC = () => {
 
   const {protocol, port, hash, pathname} = window.location;
   const localPath = `${protocol}//${localIp}:${port}${pathname}${hash}`;
-  const qrUrl = `egroupapp://debug?url=${localPath}`;
+  const qrUrl = `ekpapp://debug?url=${localPath}`;
 
   console.log(64, qrUrl);
 
